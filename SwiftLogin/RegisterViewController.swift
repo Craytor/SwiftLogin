@@ -50,31 +50,7 @@ class RegisterPageViewController: UIViewController {
             
         }
         
-        // Store data
-        //        let myUser:PFUser = PFUser();
-        //
-        //        myUser.username = userEmail
-        //        myUser.password = userPassword
-        //        myUser.email = userEmail
-        //
-        //
-        //        myUser.signUpInBackgroundWithBlock {
-        //            (success:Bool!, error:NSError!) -> Void in
-        //
-        //            println("User successfully registered")
-        //
-        //            // Display alert message with confirmation.
-        //            var myAlert = UIAlertController(title:"Alert", message:"Registration is successful. Thank you!", preferredStyle: UIAlertControllerStyle.Alert);
-        //
-        //            let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.Default){ action in
-        //                self.dismissViewControllerAnimated(true, completion:nil);
-        //            }
-        //
-        //            myAlert.addAction(okAction);
-        //            self.presentViewController(myAlert, animated:true, completion:nil);
-        //            
-        //            
-        //        }
+        
         
     }
     

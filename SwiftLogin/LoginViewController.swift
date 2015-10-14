@@ -30,25 +30,30 @@ class LoginViewController: UIViewController {
         let userEmail = userEmailTextField.text;
         let userPassword = userPasswordTextField.text;
         
-//        let userEmailStored = NSUserDefaults.standardUserDefaults().stringForKey("userEmail");
+        //let userEmailStored = NSUserDefaults.standardUserDefaults().stringForKey("userEmail");
+        //let userPasswordStored = NSUserDefaults.standardUserDefaults().stringForKey("userPassword");
         
-//        let userPasswordStored = NSUserDefaults.standardUserDefaults().stringForKey("userPassword");
-        let userEmailStored = "tyleryouschak@gmail.com"
-        let userPasswordStored = "1c8a9cd470"
+        let userEmailStored = "user@example.com"
+        let userPasswordStored = "abc123"
         
+        // Check if emails are the same
         if(userEmailStored == userEmail) {
+            
+            // Check if passwords are the same
             if(userPasswordStored == userPassword) {
-                // Login is successfull
                 NSUserDefaults.standardUserDefaults().setBool(true,forKey:"isUserLoggedIn");
                 NSUserDefaults.standardUserDefaults().synchronize();
                 
                 self.dismissViewControllerAnimated(true, completion:nil);
+                
             } else {
+                // Whoops, incorrect pass
                 displayMyAlertMessage("The email address provided does not match our records, or the password supplied is incorrect.");
                 return;
 
             }
         } else {
+            // Whoops username or password is not set
             displayMyAlertMessage("A username and password is required.");
             return;
         }
