@@ -30,12 +30,9 @@ class LoginViewController: UIViewController {
         let userEmail = userEmailTextField.text;
         let userPassword = userPasswordTextField.text;
         
-        //let userEmailStored = NSUserDefaults.standardUserDefaults().stringForKey("userEmail");
-        //let userPasswordStored = NSUserDefaults.standardUserDefaults().stringForKey("userPassword");
-        
-        let userEmailStored = "user@example.com"
-        let userPasswordStored = "abc123"
-        
+        let userEmailStored = NSUserDefaults.standardUserDefaults().stringForKey("userEmail");
+        let userPasswordStored = NSUserDefaults.standardUserDefaults().stringForKey("userPassword");
+
         // Check if emails are the same
         if(userEmailStored == userEmail) {
             

@@ -49,8 +49,26 @@ class RegisterPageViewController: UIViewController {
             return;
             
         }
+
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setValue(userEmail, forKey: "userEmail")
+        userDefaults.setValue(userPassword, forKey: "userPassword")
+        userDefaults.synchronize() // don't forget this!!!!
+
+
+  
+        var myAlert = UIAlertController(title:"Alert", message:"Registration is successful. Thank you!", preferredStyle: UIAlertControllerStyle.Alert);
+
+        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.Default){ action in
+            self.dismissViewControllerAnimated(true, completion:nil);
+        }
+
+        myAlert.addAction(okAction);
+        self.presentViewController(myAlert, animated:true, completion:nil);
         
-        
+        return;
+            
+            
         
     }
     
